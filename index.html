@@ -7,87 +7,197 @@
   <title>PFX | Phila Forex Trading</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="header">
-    <a class="brand" href="#home">
-      <img src="logo.png" alt="PFX Logo" onerror="this.style.display='none'">
-      <span>PFX</span>
-    </a>
-    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#token">Token</a>
-      <a href="#trading">Trading</a>
-      <a href="#contract">Contract</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <p class="tag">🟢 PHILA FOREX TRADING</p>
-        <h1>Welcome to <span>PFX</span></h1>
-        <p class="lead">A simple, transparent token information website for Phila Forex Trading.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#token">Explore PFX</a>
-          <button class="btn secondary" id="addToken">🦊 Add PFX to MetaMask</button>
-        </div>
-      </div>
-      <div class="coin-card">
-        <img src="logo.png" alt="PFX Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22 viewBox=%220 0 220 220%22%3E%3Ccircle cx=%22110%22 cy=%22110%22 r=%22100%22 fill=%22%2300c853%22/%3E%3Ctext x=%22110%22 y=%22125%22 text-anchor=%22middle%22 font-size=%2255%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22white%22%3EPFX%3C/text%3E%3C/svg%3E'">
-        <h2>PFX Token</h2>
-        <p>Phila Forex Trading</p>
-      </div>
-    </section>
+<header class="header">
+  <a class="brand" href="#home">
+    <img src="logo.png" alt="PFX Logo" onerror="this.style.display='none'">
+    <span>PFX</span>
+  </a>
 
-    <section id="token" class="section">
-      <p class="tag">TOKEN INFORMATION</p>
-      <h2>PFX Token</h2>
-      <div class="grid">
-        <div class="info"><span>Name</span><strong>Phila Forex Trading</strong></div>
-        <div class="info"><span>Symbol</span><strong>PFX</strong></div>
-        <div class="info"><span>Total Supply</span><strong>1,000,000 PFX</strong></div>
-        <div class="info"><span>Network</span><strong>Ethereum Sepolia</strong></div>
-        <div class="info"><span>Standard</span><strong>ERC-20</strong></div>
-        <div class="info"><span>Decimals</span><strong>18</strong></div>
-      </div>
-    </section>
+  <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
 
-    <section id="contract" class="section dark">
-      <p class="tag">SMART CONTRACT</p>
-      <h2>Contract Address</h2>
-      <p class="muted">Replace the placeholder below with your deployed PFX Sepolia contract address.</p>
-      <div class="address-box">
-        <code id="contractAddress">YOUR_SEPOLIA_CONTRACT_ADDRESS</code>
-        <button id="copyAddress">Copy</button>
-      </div>
-      <a class="explorer" id="etherscanLink" href="#" target="_blank" rel="noopener">🔗 Open Sepolia Etherscan</a>
-    </section>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#token">Token</a>
+    <a href="#trading">Trading</a>
+    <a href="#contract">Contract</a>
+  </nav>
+</header>
 
-    <section id="trading" class="section">
-      <p class="tag">TRADING</p>
-      <h2>PFX / WETH</h2>
-      <div class="trade-card">
-        <div><span>Pair</span><strong>PFX / WETH</strong></div>
-        <div><span>Network</span><strong>Sepolia</strong></div>
-        <div><span>Status</span><strong class="status">Demo / Testnet</strong></div>
-      </div>
-      <p class="note">Trading information should only be shown as live trading after a real PFX/WETH pair and liquidity have been created.</p>
-    </section>
+<main>
 
-    <section class="section wallet">
-      <h2>🦊 MetaMask</h2>
-      <p>Add PFX to MetaMask on the Sepolia network.</p>
-      <button class="btn primary" id="addToken2">Add PFX Token</button>
-      <p id="walletMessage" class="message"></p>
-    </section>
-  </main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="tag">🟢 PHILA FOREX TRADING</p>
 
-  <footer>
-    <strong>PFX</strong> — Phila Forex Trading
-    <p>Built for Ethereum Sepolia • Mobile friendly • GitHub Pages ready</p>
-  </footer>
+    <h1>Welcome to <span>PFX</span></h1>
 
-  <script src="script.js"></script>
+    <p class="lead">
+      A simple, transparent token information website for Phila Forex Trading.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#token">Explore PFX</a>
+      <button class="btn secondary" id="addToken">
+        🦊 Add PFX to MetaMask
+      </button>
+    </div>
+  </div>
+
+  <div class="coin-card">
+    <img
+      src="logo.png"
+      alt="PFX Logo"
+      onerror="this.style.display='none'"
+    >
+
+    <h2>PFX Token</h2>
+    <p>Phila Forex Trading</p>
+  </div>
+</section>
+
+
+<section id="token" class="section">
+
+  <p class="tag">TOKEN INFORMATION</p>
+
+  <h2>PFX Token</h2>
+
+  <div class="grid">
+
+    <div class="info">
+      <span>Name</span>
+      <strong>Phila Forex Trading</strong>
+    </div>
+
+    <div class="info">
+      <span>Symbol</span>
+      <strong>PFX</strong>
+    </div>
+
+    <div class="info">
+      <span>Total Supply</span>
+      <strong>1,000,000 PFX</strong>
+    </div>
+
+    <div class="info">
+      <span>Network</span>
+      <strong>Ethereum Sepolia</strong>
+    </div>
+
+    <div class="info">
+      <span>Standard</span>
+      <strong>ERC-20</strong>
+    </div>
+
+    <div class="info">
+      <span>Decimals</span>
+      <strong>18</strong>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contract" class="section dark">
+
+  <p class="tag">SMART CONTRACT</p>
+
+  <h2>Contract Address</h2>
+
+  <p class="muted">
+    Official PFX contract deployed on Ethereum Sepolia.
+  </p>
+
+  <div class="address-box">
+
+    <code id="contractAddress">
+      0xB8F48a2B584C0fb27c920C46e0d1E168D70eeeDE
+    </code>
+
+    <button id="copyAddress">Copy</button>
+
+  </div>
+
+  <a
+    class="explorer"
+    id="etherscanLink"
+    href="https://sepolia.etherscan.io/address/0xB8F48a2B584C0fb27c920C46e0d1E168D70eeeDE"
+    target="_blank"
+    rel="noopener"
+  >
+    🔗 Open Sepolia Etherscan
+  </a>
+
+</section>
+
+
+<section id="trading" class="section">
+
+  <p class="tag">TRADING</p>
+
+  <h2>PFX / WETH</h2>
+
+  <div class="trade-card">
+
+    <div>
+      <span>Pair</span>
+      <strong>PFX / WETH</strong>
+    </div>
+
+    <div>
+      <span>Network</span>
+      <strong>Sepolia</strong>
+    </div>
+
+    <div>
+      <span>Status</span>
+      <strong class="status">Demo / Testnet</strong>
+    </div>
+
+  </div>
+
+  <p class="note">
+    PFX/WETH liquidity has been created on the Ethereum Sepolia testnet.
+    This website is for testnet information and testing.
+  </p>
+
+</section>
+
+
+<section class="section wallet">
+
+  <h2>🦊 MetaMask</h2>
+
+  <p>
+    Add PFX to MetaMask on the Sepolia network.
+  </p>
+
+  <button class="btn primary" id="addToken2">
+    Add PFX Token
+  </button>
+
+  <p id="walletMessage" class="message"></p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <strong>PFX</strong> — Phila Forex Trading
+
+  <p>
+    Built for Ethereum Sepolia • Mobile friendly • GitHub Pages
+  </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
