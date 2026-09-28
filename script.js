@@ -3,10 +3,7 @@ const TOKEN_SYMBOL = "PFX";
 const TOKEN_DECIMALS = 18;
 const TOKEN_NAME = "Phila Forex Trading";
 
-// ================================
-// MOBILE MENU
-// ================================
-
+// Mobile menu
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
@@ -22,10 +19,7 @@ nav.classList.remove("open");
 });
 }
 
-// ================================
-// COPY CONTRACT ADDRESS
-// ================================
-
+// Copy contract address
 const copyAddress = document.getElementById("copyAddress");
 const contractAddress = document.getElementById("contractAddress");
 
@@ -51,49 +45,41 @@ contractAddress.textContent.trim()
 });
 }
 
-// ================================
-// ADD PFX TO METAMASK
-// ================================
-
+// Add PFX to MetaMask
 async function addPFXToMetaMask() {
-
 if (typeof window.ethereum === "undefined") {
-alert("MetaMask is not installed. Please install MetaMask first.");
+alert("MetaMask is not installed.");
 return;
 }
 
 try {
-
-```
 const wasAdded = await window.ethereum.request({
-  method: "wallet_watchAsset",
-  params: {
-    type: "ERC20",
-    options: {
-      address: CONTRACT_ADDRESS,
-      symbol: TOKEN_SYMBOL,
-      decimals: TOKEN_DECIMALS,
-      image: new URL("logo.png", window.location.href).href
-    }
-  }
+method: "wallet_watchAsset",
+params: {
+type: "ERC20",
+options: {
+address: CONTRACT_ADDRESS,
+symbol: TOKEN_SYMBOL,
+decimals: TOKEN_DECIMALS,
+image: new URL("logo.png", window.location.href).href
+}
+}
 });
 
+```
 const message = document.getElementById("walletMessage");
 
 if (message) {
-  if (wasAdded) {
-    message.textContent = "PFX was added to MetaMask successfully! 🦊";
-  } else {
-    message.textContent = "PFX was not added.";
-  }
+  message.textContent = wasAdded
+    ? "PFX was added to MetaMask successfully! 🦊"
+    : "PFX was not added.";
 }
 ```
 
 } catch (error) {
+console.error("MetaMask error:", error);
 
 ```
-console.error(error);
-
 const message = document.getElementById("walletMessage");
 
 if (message) {
@@ -116,21 +102,6 @@ const addToken2 = document.getElementById("addToken2");
 
 if (addToken2) {
 addToken2.addEventListener("click", addPFXToMetaMask);
-}
-
-// ================================
-// NETWORK INFORMATION
-// ================================
-
-if (typeof window.ethereum !== "undefined") {
-
-window.ethereum.on("chainChanged", () => {
-console.log("Network changed.");
-});
-
-window.ethereum.on("accountsChanged", (accounts) => {
-console.log("Account changed:", accounts);
-});
 }
 
 console.log("PFX website loaded successfully.");
